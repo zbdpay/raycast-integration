@@ -36,12 +36,26 @@ declare namespace Preferences {
   export type Payments = ExtensionPreferences & {}
   /** Preferences accessible in the `payment` command */
   export type Payment = ExtensionPreferences & {}
-  /** Preferences accessible in the `paylink` command */
-  export type Paylink = ExtensionPreferences & {}
-  /** Preferences accessible in the `withdraw` command */
-  export type Withdraw = ExtensionPreferences & {}
-  /** Preferences accessible in the `onchain` command */
-  export type Onchain = ExtensionPreferences & {}
+  /** Preferences accessible in the `paylink-create` command */
+  export type PaylinkCreate = ExtensionPreferences & {}
+  /** Preferences accessible in the `paylink-get` command */
+  export type PaylinkGet = ExtensionPreferences & {}
+  /** Preferences accessible in the `paylink-list` command */
+  export type PaylinkList = ExtensionPreferences & {}
+  /** Preferences accessible in the `paylink-cancel` command */
+  export type PaylinkCancel = ExtensionPreferences & {}
+  /** Preferences accessible in the `withdraw-create` command */
+  export type WithdrawCreate = ExtensionPreferences & {}
+  /** Preferences accessible in the `withdraw-status` command */
+  export type WithdrawStatus = ExtensionPreferences & {}
+  /** Preferences accessible in the `onchain-quote` command */
+  export type OnchainQuote = ExtensionPreferences & {}
+  /** Preferences accessible in the `onchain-send` command */
+  export type OnchainSend = ExtensionPreferences & {}
+  /** Preferences accessible in the `onchain-status` command */
+  export type OnchainStatus = ExtensionPreferences & {}
+  /** Preferences accessible in the `onchain-retry-claim` command */
+  export type OnchainRetryClaim = ExtensionPreferences & {}
   /** Preferences accessible in the `fetch` command */
   export type Fetch = ExtensionPreferences & {}
 }
@@ -61,12 +75,26 @@ declare namespace Arguments {
   export type Payments = {}
   /** Arguments passed to the `payment` command */
   export type Payment = {}
-  /** Arguments passed to the `paylink` command */
-  export type Paylink = {}
-  /** Arguments passed to the `withdraw` command */
-  export type Withdraw = {}
-  /** Arguments passed to the `onchain` command */
-  export type Onchain = {}
+  /** Arguments passed to the `paylink-create` command */
+  export type PaylinkCreate = {}
+  /** Arguments passed to the `paylink-get` command */
+  export type PaylinkGet = {}
+  /** Arguments passed to the `paylink-list` command */
+  export type PaylinkList = {}
+  /** Arguments passed to the `paylink-cancel` command */
+  export type PaylinkCancel = {}
+  /** Arguments passed to the `withdraw-create` command */
+  export type WithdrawCreate = {}
+  /** Arguments passed to the `withdraw-status` command */
+  export type WithdrawStatus = {}
+  /** Arguments passed to the `onchain-quote` command */
+  export type OnchainQuote = {}
+  /** Arguments passed to the `onchain-send` command */
+  export type OnchainSend = {}
+  /** Arguments passed to the `onchain-status` command */
+  export type OnchainStatus = {}
+  /** Arguments passed to the `onchain-retry-claim` command */
+  export type OnchainRetryClaim = {}
   /** Arguments passed to the `fetch` command */
   export type Fetch = {}
 }
