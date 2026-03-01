@@ -118,7 +118,8 @@
     "fix-lint": "ray lint --fix",
     "test": "tsx --test test/**/*.test.ts",
     "typecheck": "tsc --noEmit",
-    "verify:contracts": "node ./scripts/verify-contracts.mjs"
+    "verify:contracts": "node ./scripts/verify-contracts.mjs",
+    "publish": "npx @raycast/api@latest publish"
   },
   "dependencies": {
     "@zbdpay/agent-wallet": "^1.2.0",
