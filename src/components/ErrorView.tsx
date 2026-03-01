@@ -1,6 +1,6 @@
 import { Action, ActionPanel, Detail } from "@raycast/api";
 import { CliExecutionError } from "../lib/runner";
-import { toJsonMarkdown } from "../lib/display";
+import { buildDisplayModel } from "../lib/display";
 
 interface ErrorViewProps {
   title: string;
@@ -21,14 +21,25 @@ export function ErrorView(props: ErrorViewProps) {
           message: props.error instanceof Error ? props.error.message : String(props.error),
         };
 
+  const model = buildDisplayModel(payload);
+  const metadata =
+    model.metadataRows.length > 0 ? (
+      <Detail.Metadata>
+        {model.metadataRows.map((row, index) => (
+          <Detail.Metadata.Label key={`${row.title}-${index}`} title={row.title} text={row.text} />
+        ))}
+      </Detail.Metadata>
+    ) : undefined;
+
   return (
     <Detail
-      markdown={toJsonMarkdown(payload)}
+      markdown={model.markdown}
       navigationTitle={props.title}
+      metadata={metadata}
       actions={
         <ActionPanel>
           <Action title="Back" onAction={props.onBack} />
-          <Action.CopyToClipboard title="Copy Error JSON" content={JSON.stringify(payload, null, 2)} />
+          <Action.CopyToClipboard title="Copy Error JSON" content={model.rawJson} />
         </ActionPanel>
       }
     />

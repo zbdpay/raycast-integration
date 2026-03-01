@@ -1,7 +1,7 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "raycast-extension",
-  "title": "ZBD Agent Wallet",
+  "title": "ZBD Wallet",
   "description": "Run zbdw wallet commands from Raycast with structured JSON output",
   "icon": "icon.png",
   "author": "andrerfneves",
@@ -16,68 +16,68 @@
   "commands": [
     {
       "name": "init",
-      "title": "Zbdw Init",
-      "description": "Initialize wallet identity",
+      "title": "zbdw Init",
+      "description": "Initialize local wallet config with API key and lightning address",
       "mode": "view"
     },
     {
       "name": "info",
-      "title": "Zbdw Info",
-      "description": "Show wallet metadata",
+      "title": "zbdw Info",
+      "description": "Show configured lightning address, masked API key, and wallet balance",
       "mode": "view"
     },
     {
       "name": "balance",
-      "title": "Zbdw Balance",
-      "description": "Get wallet balance",
+      "title": "zbdw Balance",
+      "description": "Get current wallet balance in sats",
       "mode": "view"
     },
     {
       "name": "receive",
-      "title": "Zbdw Receive",
-      "description": "Create invoice or static charge",
+      "title": "zbdw Receive",
+      "description": "Create a Lightning invoice or static charge for incoming payments",
       "mode": "view"
     },
     {
       "name": "send",
-      "title": "Zbdw Send",
-      "description": "Send payment",
+      "title": "zbdw Send",
+      "description": "Send payment to bolt11, lnurl, lightning address, or gamertag",
       "mode": "view"
     },
     {
       "name": "payments",
-      "title": "Zbdw Payments",
-      "description": "List payment history",
+      "title": "zbdw Payments",
+      "description": "List local payment history records tracked by zbdw",
       "mode": "view"
     },
     {
       "name": "payment",
-      "title": "Zbdw Payment",
-      "description": "Get payment detail",
+      "title": "zbdw Payment",
+      "description": "Get payment details by id from local history or remote lookup",
       "mode": "view"
     },
     {
       "name": "paylink",
-      "title": "Zbdw Paylink",
-      "description": "Manage paylinks",
+      "title": "zbdw Paylink",
+      "description": "Create, get, list, and cancel hosted paylinks with metadata",
       "mode": "view"
     },
     {
       "name": "withdraw",
-      "title": "Zbdw Withdraw",
-      "description": "Manage LNURL withdraw",
+      "title": "zbdw Withdraw",
+      "description": "Create LNURL-withdraw links and check withdraw status",
       "mode": "view"
     },
     {
       "name": "onchain",
-      "title": "Zbdw Onchain",
-      "description": "Manage onchain payouts",
+      "title": "zbdw Onchain",
+      "description": "Quote, send, and track onchain payout workflows",
       "mode": "view"
     },
     {
       "name": "fetch",
-      "title": "Zbdw Fetch",
-      "description": "Run L402-aware fetch",
+      "title": "zbdw Fetch",
+      "description": "Run L402-aware HTTP fetch with optional max sats guard",
       "mode": "view"
     }
   ],
@@ -121,6 +121,7 @@
     "verify:contracts": "node ./scripts/verify-contracts.mjs"
   },
   "dependencies": {
+    "@zbdpay/agent-wallet": "^1.2.0",
     "@raycast/api": "^1.94.0",
     "@raycast/utils": "^1.10.1"
   },
